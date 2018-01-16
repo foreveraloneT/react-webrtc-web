@@ -1,0 +1,14 @@
+:local(.container) {
+  margin: 80px auto;
+  width: 640px;
+}
+
+:local(.inner_container) {
+  position: relative;
+  margin: 0 auto;
+  padding: 20px 20px 20px;
+  width: 310px;
+  background: white;
+  border-radius: 3px;
+  border: 1px solid #CCC;
+}
