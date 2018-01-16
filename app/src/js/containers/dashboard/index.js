@@ -3,10 +3,15 @@ import styles from './dashboard.scss'
 
 export default class Dashboard extends React.Component {
 
+  videoStream = null
+
   gotStream = (stream) => {
+    console.log('stream', stream)
+    console.log('track', stream.getVideoTracks())
     const video = document.getElementById('my-video')
     try {
       video.srcObject = stream
+      this.videoStream = stream
     } catch (error) {
       video.src = URL.createObjectURL(stream)
     }
@@ -18,6 +23,12 @@ export default class Dashboard extends React.Component {
       audio: false,
     })
     .then(this.gotStream)
+  }
+
+  stopStream = () => {
+    if (this.videoStream) {
+      this.videoStream.getVideoTracks()[0].stop()
+    }
   }
 
   componentDidMount() {
@@ -34,6 +45,7 @@ export default class Dashboard extends React.Component {
           autoPlay
         >
         </video>
+        <button type="button" onClick={this.stopStream} >Stop</button>
       </div>
     )
   }
