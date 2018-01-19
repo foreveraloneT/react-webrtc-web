@@ -26,6 +26,9 @@ const iceConfig = [
   },
 ]
 
+// const SIGNAL_SERVER = 'ws://localhost:8100'
+const SIGNAL_SERVER = 'ws://ec2-18-217-177-44.us-east-2.compute.amazonaws.com:8100'
+
 export default class Dashboard extends React.Component {
 
   videoStream = null
@@ -51,7 +54,7 @@ export default class Dashboard extends React.Component {
 
   componentDidMount() {
     this.getUserWebcam()
-    this.socket = io('ws://localhost:8100')
+    this.socket = io(SIGNAL_SERVER)
     this.socket.on('message', (message) => {
       const data = JSON.parse(message)
       console.log('get data from soccket', data)
