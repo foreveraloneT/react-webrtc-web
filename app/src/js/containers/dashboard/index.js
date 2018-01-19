@@ -269,6 +269,8 @@ export default class Dashboard extends React.Component {
           <video
             className="local-video"
             id='my-video'
+            controls
+            muted
             autoPlay
           >
           </video>
