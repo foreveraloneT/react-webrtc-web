@@ -32,8 +32,8 @@ const iceConfig = [
 ]
 
 // const SIGNAL_SERVER = 'ws://localhost:8100'
-const SIGNAL_SERVER = 'ws://52.220.51.100:8100'
-// const SIGNAL_SERVER = 'wss://signal.ccd.dev.scale360.solutions'
+// const SIGNAL_SERVER = 'ws://52.220.51.100:8100'
+const SIGNAL_SERVER = 'wss://signal.ccd.dev.scale360.solutions'
 // const SIGNAL_SERVER = 'ws://ec2-18-216-239-69.us-east-2.compute.amazonaws.com:8100'
 
 export default class Dashboard extends React.Component {
