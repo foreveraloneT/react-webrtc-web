@@ -20,14 +20,21 @@ const iceConfig = [
     urls: 'stun:stun.l.google.com:19302'
   },
   {
-    url: 'turn:turn.anyfirewall.com:443?transport=tcp',
+    urls: 'turn:turn.anyfirewall.com:443?transport=tcp',
     credential: 'webrtc',
     username: 'webrtc'
   },
+  {
+    urls: 'turn:numb.viagenie.ca',
+    credential: 'muazkh',
+    username: 'webrtc@live.com'
+  }
 ]
 
 // const SIGNAL_SERVER = 'ws://localhost:8100'
-const SIGNAL_SERVER = 'ws://ec2-18-216-239-69.us-east-2.compute.amazonaws.com:8100'
+const SIGNAL_SERVER = 'ws://52.220.51.100:8100'
+// const SIGNAL_SERVER = 'wss://signal.ccd.dev.scale360.solutions'
+// const SIGNAL_SERVER = 'ws://ec2-18-216-239-69.us-east-2.compute.amazonaws.com:8100'
 
 export default class Dashboard extends React.Component {
 
