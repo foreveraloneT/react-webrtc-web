@@ -1,14 +1,6 @@
 version: '3'
 
 services:
-  web:
-    build: .
-    image: react-webrtc
-    expose:
-      - 8080
-    environment:
-      - VIRTUAL_HOST=signal.ccd.dev.scale360.solutions
-
   proxy:
     image: jwilder/nginx-proxy
     ports:
@@ -17,3 +9,11 @@ services:
     volumes:
       - /var/run/docker.sock:/tmp/docker.sock:ro
       - /etc/letsencrypt/live/signal.ccd.dev.scale360.solutions:/etc/nginx/certs
+
+  web:
+    build: .
+    image: react-webrtc
+    expose:
+      - 8080
+    environment:
+      - VIRTUAL_HOST=signal.ccd.dev.scale360.solutions
