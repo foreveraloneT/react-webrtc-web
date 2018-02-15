@@ -8,7 +8,7 @@ services:
       - 443:443
     volumes:
       - /var/run/docker.sock:/tmp/docker.sock:ro
-      - /etc/letsencrypt/live/signal.ccd.dev.scale360.solutions:/etc/nginx/certs
+      - /etc/letsencrypt/live/client.ccd.dev.scale360.solutions:/etc/nginx/certs
 
   web:
     build: .
@@ -16,4 +16,4 @@ services:
     expose:
       - 8080
     environment:
-      - VIRTUAL_HOST=signal.ccd.dev.scale360.solutions
+      - VIRTUAL_HOST=client.ccd.dev.scale360.solutions
