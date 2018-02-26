@@ -16,18 +16,26 @@ const msgType = {
 }
 
 const iceConfig = [
+  // {
+  //   urls: 'stun:stun.l.google.com:19302'
+  // },
+  // {
+  //   urls: 'turn:turn.anyfirewall.com:443?transport=tcp',
+  //   credential: 'webrtc',
+  //   username: 'webrtc'
+  // },
+  // {
+  //   urls: 'turn:numb.viagenie.ca',
+  //   credential: 'muazkh',
+  //   username: 'webrtc@live.com'
+  // }
   {
-    urls: 'stun:stun.l.google.com:19302'
+    urls: 'stun:104.199.146.197'
   },
   {
-    urls: 'turn:turn.anyfirewall.com:443?transport=tcp',
-    credential: 'webrtc',
-    username: 'webrtc'
-  },
-  {
-    urls: 'turn:numb.viagenie.ca',
-    credential: 'muazkh',
-    username: 'webrtc@live.com'
+    urls: 'turn:104.199.146.197',
+    credential: 'password',
+    username: 'user'
   }
 ]
 
